@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/Montserrat-Light.woff2") format("woff2"),
+    url("./assets/Montserrat-Light.woff") format("woff");
+  /* font-weight: 300; */
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: white;
+  font-family: "Montserrat";
+  color: #404040;
+  padding: 24rem 0rem 0rem 16rem;
+  height: 100%;
+  width: 100%;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4rem;
+  gap: 10rem;
+  justify-content: center;
+  margin-left: 20rem;
+}
+.back {
+  width: 8rem;
+  height: 10rem;
+  margin-bottom: 8rem;
+}
+.add-task-input {
+  height: 10rem;
+  font-size: 10rem;
+  border: none;
+  background-color: transparent;
+}
+.add-task-input::placeholder {
+  color: #404040;
+  opacity: 20%;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+span::before {
+  content: "";
+  width: 0.5rem;
+  height: 10rem;
+  background: #000000;
+  position: absolute;
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
+.container {
+  text-align: left !important;
+  padding-left: 20rem;
+}
+form {
+  font-family: "Montserrat";
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 4rem;
+  gap: 5rem;
+}
+form input {
+  height: 8rem;
+  width: 24rem;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+}
+.date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+.date-input::after {
+  content: url(./assets/arrow-down.png);
+}
+.time-input {
+  font-family: "Montserrat";
+  font-size: 3rem;
+  height: 5rem;
+  width: 30rem;
+  margin: 1rem;
+  border: none;
+}
+.time-input::after {
+  position: absolute;
+  right: 0;
+  height: 5rem;
+  content: url(./assets/arrow-down.png);
+  z-index: 100;
+}
+.time-input option {
+  vertical-align: inherit;
+}
+/* .select-wrapper {
+  height: 50rem;
+  overflow-y: visible;
+  display: inline;
+} */
+form label {
+  font-family: "Montserrat";
+  display: flex;
+  /* justify-content: center; */
+  font-size: 4rem;
+  gap: 5rem;
+  margin-top: 5rem;
+  font-weight: bold;
+}
+.task-type {
+  font-family: "Montserrat";
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  font-size: 4rem;
+  gap: 5rem;
+  column-gap: 2rem;
+  margin-top: 5rem;
+  font-weight: bold;
+  height: 8rem;
+  margin-bottom: 22rem;
+}
+.task-type button {
+  height: 10rem;
+  font-family: "Montserrat";
+  font-size: 4rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+}
+
+section + label {
+  font-family: "Montserrat";
+  display: flex;
+  /* justify-content: center; */
+  font-size: 4rem;
+  gap: 5rem;
+  margin-top: 5rem;
+  font-weight: bold;
+}
+footer {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: 4rem;
+  gap: 5rem;
+  margin-top: 25rem;
+  font-weight: bold;
+}
+.description-input {
+  height: 6rem;
+  font-size: 6rem;
+  border: none;
+  background-color: transparent;
+}
+.description-input::placeholder {
+  color: #404040;
+  opacity: 20%;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.task-submit {
+  height: 10rem;
+  font-family: "Montserrat";
+  font-size: 4rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  background-color: crimson;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+}
+.task-submit:disabled {
+  background-color: #404040;
+  opacity: 50%;
+}
+.container > label {
+  margin-bottom: 5rem;
+}
+footer::after {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: #404040;
+  position: absolute;
+  bottom: 20rem;
+}
+.task-type {
+  margin: 10px;
+}
+
+.task-type input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.task-type label {
+  display: flex;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  border-radius: 1rem;
+  color: white;
+  height: 8rem;
+  align-items: center;
+}
+
+.task-type input[type="radio"]:checked + label {
+  background-color: rgb(255, 199, 187);
+  border: 0.5rem solid rgb(123, 123, 123);
+}
+.work-type {
+  background-color: #42aafd;
+}
+.personal-type {
+  background-color: #01bacc;
+}
+.shopping-type {
+  background-color: #cd42fd;
+}
+.health-type {
+  background-color: #ee2375;
+}
+.other-type {
+  background-color: #8539f9;
+}
+textarea {
+  resize: none;
+  height: 10rem;
+}
+input[type="text"]:active {
+  border: none;
+  outline: none;
+}

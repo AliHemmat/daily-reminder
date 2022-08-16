@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADD TASK</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Calendar-favicon.png">
+    <meta charset="utf-8" />
+    <link href="./add-task-styles.css" rel="stylesheet" />
+
+    <style></style>
+  </head>
+
+  <body>
+    <header>
+      <input type="image" src="./assets/arrow-left.png" class="back" onclick="home()"/>
+      <span>
+        <input
+          type="text"
+          placeholder="Add task"
+          class="add-task-input"
+          required
+      /></span>
+    </header>
+    <div class="container">
+      <section>
+        <form>
+            <label>Choose date</label>
+            <input type="date" class="date-input" required />
+            <label>Choose Start time</label>
+              <div class="select-wrapper">
+              <select id="time-input" class="time-input"
+              required>
+              <option selected disabled class="optnplaceholder">Select time</option>
+                <option value="1">08:00</option>
+                <option value="2">08:30</option>
+                <option value="3">09:00</option>
+                <option value="4">09:30</option>
+                <option value="5">10:00</option>
+                <option value="6">10:30</option>
+                <option value="7">11:00</option>
+                <option value="8">11:30</option>
+                <option value="9">12:00</option>
+                <option value="10">12:30</option>
+                <option value="11">13:00</option>
+                <option value="12">13:30</option>
+                <option value="13">14:00</option>
+                <option value="14">14:30</option>
+                <option value="15">15:00</option>
+                <option value="16">15:30</option>
+                <option value="17">16:00</option>
+                <option value="18">16:30</option>
+                <option value="19">17:00</option>
+                <option value="20">17:30</option>
+                <option value="21">18:00</option>
+                <option value="22">18:30</option>
+                <option value="23">19:00</option>
+                <option value="24">19:30</option>
+                <option value="25">20:00</option>
+                <option value="26">20:30</option>
+                <option value="27">21:00</option>
+                <option value="28">21:30</option>
+                <option value="29">22:00</option>
+                <option value="30">22:30</option>
+                <option value="31">23:00</option>
+                <option value="32">23:30</option>
+              </select>
+            </div>
+          </form>
+      </section>
+      <label>Choose task type</label>
+      <div class="task-type">
+        <input type="radio" class="work-type" value="work" name="tasktype" id="work">
+        <label class="work-type" for="work">Work</label>
+      </input>
+        <input type="radio"  class="personal-type" value="personal" name="tasktype" id="personal">
+        <label class="personal-type" for="personal">Personal</label>
+      </input>
+        <input type="radio"  class="shopping-type" value="shopping" name="tasktype" id="shopping"><label for="shopping"  class="shopping-type">Shopping</label> </input>
+        <input type="radio"  class="health-type" value="health" name="tasktype" id="health"><label for="health" class="health-type">Health</label></input>
+        <input type="radio"  class="other-type" value="other" name="tasktype" id="other"><label for="other" class="other-type">Other</label> </input>
+      </div>
+      <div>
+        <footer>
+          <label>Write description</label>
+          <textarea 
+            type="text"
+            placeholder="Description..."
+            class="description-input"
+          ></textarea>
+        </footer>
+      </div>
+      <button type="submit" class="task-submit" onclick="addTask()" >add task</button>
+    </div>
+  
+    <script src="script.js"></script>
+    <script src="./nav.js"></script>
+  </body>
+</html>

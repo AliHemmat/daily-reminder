@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/Montserrat-Light.woff2") format("woff2"),
+    url("./assets/Montserrat-Light.woff") format("woff");
+  /* font-weight: 300; */
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: white;
+  font-family: "Montserrat";
+  color: #404040;
+  padding: 24rem 0rem 0rem 12rem;
+  height: 100%;
+  width: 100%;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5rem;
+  margin-bottom: 10rem;
+}
+.back {
+  width: 4rem;
+}
+.search-input {
+  height: 8rem;
+  width: 50rem;
+  font-size: 8rem;
+  border: none;
+  background-color: transparent;
+  visibility: hidden;
+}
+.search-input::placeholder {
+  color: #404040;
+  opacity: 20%;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.search {
+  height: 8rem;
+  z-index: 5;
+  grid-column: 3/-1;
+}
+.close {
+  height: 6rem;
+  position: absolute;
+  top: 25rem;
+  justify-self: start;
+  visibility: hidden;
+}
+section {
+  margin-left: -4rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 300%;
+  text-align: center;
+}
+.edit {
+  height: 8rem;
+}
+section h3 {
+  font-weight: bold;
+}
+section div {
+  margin-left: 4rem;
+  display: flex;
+  gap: 12rem;
+  position: relative;
+  margin-bottom: 4rem;
+  justify-content: space-between;
+  align-items: stretch;
+  justify-items: stretch;
+  background-color: white;
+  z-index: 10;
+}
+section div div {
+  display: block;
+  background-color: transparent;
+}
+
+/* section > div::before {
+  content: "";
+  position: absolute;
+  right: 10rem;
+  top: 0rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #ee2375;
+  border-radius: 50%;
+} */
+.work-label::before {
+  content: " ";
+  position: absolute;
+  right: 10rem;
+  top: 0rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #42aafd;
+  border-radius: 50%;
+}
+.other-label::before {
+  content: " ";
+  position: absolute;
+  right: 10rem;
+  top: 0rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #8539f9;
+  border-radius: 50%;
+}
+.personal-label::before {
+  content: " ";
+  position: absolute;
+  right: 10rem;
+  top: 0rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #01bacc;
+  border-radius: 50%;
+}
+.shopping-label::before {
+  content: " ";
+  position: absolute;
+  right: 10rem;
+  top: 0rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #cd42fd;
+  border-radius: 50%;
+}
+.health-label::before {
+  content: " ";
+  position: absolute;
+  right: 10rem;
+  top: 0rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #ee2375;
+  border-radius: 50%;
+}
+section ::after {
+  content: "";
+  width: 150rem;
+  height: 0.5rem;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 12rem;
+  right: 0rem;
+  z-index: 10;
+}
+.trash {
+  margin: 0;
+  padding: 0;
+  width: 7rem;
+  border: 1rem solid #ee2375;
+  background-color: #ee2375;
+  padding: 1rem;
+  padding-left: 10rem;
+  padding-right: 6rem;
+  z-index: 0;
+  visibility: hidden;
+}

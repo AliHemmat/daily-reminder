@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TASK-LISTS</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Calendar-favicon.png" />
+    <meta charset="utf-8" />
+    <link href="./task-list-styles.css" rel="stylesheet" />
+
+    <style></style>
+  </head>
+
+  <body>
+    <header>
+      <input
+        type="image"
+        src="./assets/arrow-left.png"
+        class="back"
+        onclick="home()"
+      />
+      <input
+        type="text"
+        placeholder="Search task"
+        class="search-input"
+        id="search-field"
+        onkeyup="search()"
+        required
+      />
+      <input
+        type="image"
+        src="./assets/search.png"
+        class="search"
+        onclick="showSearch()"
+      />
+    </header>
+    <input
+      type="image"
+      src="./assets/close.png"
+      class="close"
+      onclick="hideSearch()"
+    />
+    <div class="container">
+      <section></section>
+      <footer></footer>
+    </div>
+    <script src="./nav.js"></script>
+    <script src="task-list.js"></script>
+  </body>
+</html>
