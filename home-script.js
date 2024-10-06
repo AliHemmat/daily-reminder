@@ -62,7 +62,7 @@ if (other) {
 let now = new Date();
 let todayTasks = 0;
 let taskLeft = 0;
-for (let i = 0; i < local.length; i++) {
+for (let i = 0; i < local?.length; i++) {
   let temp = local[i].time / 2 + 7;
   temp = now.getMinutes() > 30 ? (temp = temp - 0.5) : temp + 0;
   let newDate = local[i].date;
@@ -85,5 +85,5 @@ for (let i = 0; i < local.length; i++) {
 let allTasks = document.querySelector(".all-tasks");
 allTasks.textContent = `Today you have ${todayTasks} tasks`;
 let createdTasks = document.querySelector(".number-created-tasks");
-createdTasks.textContent = local.length;
+createdTasks.textContent = local?.length ?? 0;
 document.querySelector(".left-tasks h2").textContent = taskLeft;

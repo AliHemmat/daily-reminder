@@ -12,7 +12,7 @@
 }
 
 html {
-  font-size: 160%;
+  font-size: 62.5%;
 }
 h1,
 h2,
@@ -82,9 +82,9 @@ small {
 .task-types {
   display: grid;
   margin-top: 2rem;
-  grid-template-columns: repeat(2, 15rem);
+  /* grid-template-columns: repeat(2, 15rem);
   grid-template-rows: repeat(2, 7.5rem);
-  padding: 1.5rem;
+  padding: 1.5rem; */
   justify-content: end;
   justify-items: stretch;
   gap: 1rem;
